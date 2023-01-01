@@ -31,6 +31,7 @@ struct FeedView: View {
             .clipShape(Circle())
             .padding()
         }
+        .navigationTitle("Home")
     }
 }
 
