@@ -12,6 +12,7 @@
 		5A7DF571296185630027B1B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7DF570296185630027B1B1 /* Assets.xcassets */; };
 		5A7DF574296185630027B1B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7DF573296185630027B1B1 /* Preview Assets.xcassets */; };
 		5A7DF57F2961C49F0027B1B1 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DF57E2961C49F0027B1B1 /* FeedView.swift */; };
+		5A7DF5812961C6840027B1B1 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DF5802961C6840027B1B1 /* TweetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		5A7DF570296185630027B1B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A7DF573296185630027B1B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A7DF57E2961C49F0027B1B1 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		5A7DF5802961C6840027B1B1 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				5A7DF56E296185630027B1B1 /* ContentView.swift */,
 				5A7DF57E2961C49F0027B1B1 /* FeedView.swift */,
+				5A7DF5802961C6840027B1B1 /* TweetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				5A7DF56F296185630027B1B1 /* ContentView.swift in Sources */,
 				5A7DF57F2961C49F0027B1B1 /* FeedView.swift in Sources */,
 				5A7DF56D296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift in Sources */,
+				5A7DF5812961C6840027B1B1 /* TweetCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
