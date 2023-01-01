@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A4468BA2961E18C00041E02 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4468B92961E18C00041E02 /* ConversationView.swift */; };
+		5A4468BC2961E19300041E02 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4468BB2961E19300041E02 /* ConversationCell.swift */; };
 		5A7DF56D296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DF56C296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift */; };
 		5A7DF56F296185630027B1B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DF56E296185630027B1B1 /* ContentView.swift */; };
 		5A7DF571296185630027B1B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7DF570296185630027B1B1 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A4468B92961E18C00041E02 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		5A4468BB2961E19300041E02 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		5A7DF569296185630027B1B1 /* Twitter SwiftUI Clone Udemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter SwiftUI Clone Udemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7DF56C296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter_SwiftUI_Clone_UdemyApp.swift; sourceTree = "<group>"; };
 		5A7DF56E296185630027B1B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A4468B82961E17800041E02 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				5A4468B92961E18C00041E02 /* ConversationView.swift */,
+				5A4468BB2961E19300041E02 /* ConversationCell.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
 		5A7DF560296185630027B1B1 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +105,7 @@
 				5A7DF56E296185630027B1B1 /* ContentView.swift */,
 				5A7DF5842961CA430027B1B1 /* Feed */,
 				5A7DF5852961CA4C0027B1B1 /* Search */,
+				5A4468B82961E17800041E02 /* Messages */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +213,8 @@
 				5A7DF5812961C6840027B1B1 /* TweetCell.swift in Sources */,
 				5A7DF5872961CA8E0027B1B1 /* SearchBar.swift in Sources */,
 				5A7DF5892961CC270027B1B1 /* UserCell.swift in Sources */,
+				5A4468BA2961E18C00041E02 /* ConversationView.swift in Sources */,
+				5A4468BC2961E19300041E02 /* ConversationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
