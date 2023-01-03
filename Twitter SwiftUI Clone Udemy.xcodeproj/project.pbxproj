@@ -11,6 +11,7 @@
 		5A31B68C29642F7B007153E0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B68B29642F7B007153E0 /* ChatView.swift */; };
 		5A31B68F29643066007153E0 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B68E29643066007153E0 /* ChatBubble.swift */; };
 		5A31B692296431C9007153E0 /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B691296431C9007153E0 /* MockMessage.swift */; };
+		5A31B6942964F7C3007153E0 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B6932964F7C3007153E0 /* MessageView.swift */; };
 		5A4468BA2961E18C00041E02 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4468B92961E18C00041E02 /* ConversationView.swift */; };
 		5A4468BC2961E19300041E02 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4468BB2961E19300041E02 /* ConversationCell.swift */; };
 		5A7DF56D296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DF56C296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift */; };
@@ -29,6 +30,7 @@
 		5A31B68B29642F7B007153E0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		5A31B68E29643066007153E0 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		5A31B691296431C9007153E0 /* MockMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
+		5A31B6932964F7C3007153E0 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		5A4468B92961E18C00041E02 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		5A4468BB2961E19300041E02 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		5A7DF569296185630027B1B1 /* Twitter SwiftUI Clone Udemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter SwiftUI Clone Udemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,7 @@
 			children = (
 				5A31B68B29642F7B007153E0 /* ChatView.swift */,
 				5A31B68929642F22007153E0 /* MessageInputView.swift */,
+				5A31B6932964F7C3007153E0 /* MessageView.swift */,
 				5A31B68E29643066007153E0 /* ChatBubble.swift */,
 			);
 			path = Chat;
@@ -238,6 +241,7 @@
 				5A7DF5872961CA8E0027B1B1 /* SearchBar.swift in Sources */,
 				5A7DF5892961CC270027B1B1 /* UserCell.swift in Sources */,
 				5A4468BA2961E18C00041E02 /* ConversationView.swift in Sources */,
+				5A31B6942964F7C3007153E0 /* MessageView.swift in Sources */,
 				5A4468BC2961E19300041E02 /* ConversationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
