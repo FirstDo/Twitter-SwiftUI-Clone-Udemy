@@ -27,6 +27,7 @@ struct UserCell: View {
             
             Spacer()
         }
+        .foregroundColor(.black)
     }
 }
 

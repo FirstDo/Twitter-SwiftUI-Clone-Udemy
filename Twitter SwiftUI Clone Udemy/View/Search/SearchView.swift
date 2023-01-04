@@ -18,7 +18,9 @@ struct SearchView: View {
             ScrollView {
                 VStack {
                     ForEach(0..<10) { _ in
-                        UserCell()
+                        NavigationLink(destination: UserProfileView()) {
+                            UserCell()
+                        }
                     }
                 }
                 .padding(.leading)
