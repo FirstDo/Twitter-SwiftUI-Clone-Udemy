@@ -98,6 +98,21 @@
 			path = Tweets;
 			sourceTree = "<group>";
 		};
+		5A31B6A32965BE7A007153E0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5A31B6A42965BE87007153E0 /* Views */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5A31B6A42965BE87007153E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5A4468B82961E17800041E02 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7DF56C296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift */,
+				5A31B6A32965BE7A007153E0 /* Utils */,
 				5A7DF57B2961C4800027B1B1 /* Model */,
 				5A7DF57D2961C48C0027B1B1 /* ViewModel */,
 				5A7DF57C2961C4860027B1B1 /* View */,

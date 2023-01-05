@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewTweetView: View {
     @Binding var isPresented: Bool
+    @State var captionText: String = ""
     
     var body: some View {
         NavigationView {
@@ -20,11 +21,11 @@ struct NewTweetView: View {
                         .clipped()
                         .frame(width: 64, height: 64)
                         .cornerRadius(32)
-
-                    Spacer()
                     
-                    Text("What's happening?")
-                        .foregroundColor(.gray)
+                    
+
+                    TextField("", text: $captionText, prompt: Text("What's happening?"), axis: .vertical)
+                        .padding(.top, 24)
                 }
                 .padding()
                 .toolbar {
