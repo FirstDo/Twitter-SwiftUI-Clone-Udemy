@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A15CF442967A20000868714 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15CF432967A20000868714 /* CustomTextField.swift */; };
 		5A31B68A29642F22007153E0 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B68929642F22007153E0 /* MessageInputView.swift */; };
 		5A31B68C29642F7B007153E0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B68B29642F7B007153E0 /* ChatView.swift */; };
 		5A31B68F29643066007153E0 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B68E29643066007153E0 /* ChatBubble.swift */; };
@@ -18,6 +19,8 @@
 		5A31B69D2964FF96007153E0 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B69C2964FF96007153E0 /* ProfileHeaderView.swift */; };
 		5A31B69F2964FF9D007153E0 /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B69E2964FF9D007153E0 /* FilterButtonView.swift */; };
 		5A31B6A22965B84F007153E0 /* NewTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B6A12965B84F007153E0 /* NewTweetView.swift */; };
+		5A31B6A929664D68007153E0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B6A829664D68007153E0 /* LoginView.swift */; };
+		5A31B6AB29664D70007153E0 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B6AA29664D70007153E0 /* RegistrationView.swift */; };
 		5A4468BA2961E18C00041E02 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4468B92961E18C00041E02 /* ConversationView.swift */; };
 		5A4468BC2961E19300041E02 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4468BB2961E19300041E02 /* ConversationCell.swift */; };
 		5A7DF56D296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DF56C296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift */; };
@@ -32,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A15CF432967A20000868714 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		5A31B68929642F22007153E0 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		5A31B68B29642F7B007153E0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		5A31B68E29643066007153E0 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
@@ -43,6 +47,8 @@
 		5A31B69C2964FF96007153E0 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		5A31B69E2964FF9D007153E0 /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
 		5A31B6A12965B84F007153E0 /* NewTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetView.swift; sourceTree = "<group>"; };
+		5A31B6A829664D68007153E0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5A31B6AA29664D70007153E0 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		5A4468B92961E18C00041E02 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		5A4468BB2961E19300041E02 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		5A7DF569296185630027B1B1 /* Twitter SwiftUI Clone Udemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter SwiftUI Clone Udemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,8 +115,19 @@
 		5A31B6A42965BE87007153E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5A15CF432967A20000868714 /* CustomTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5A31B6A729664D5B007153E0 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				5A31B6A829664D68007153E0 /* LoginView.swift */,
+				5A31B6AA29664D70007153E0 /* RegistrationView.swift */,
+			);
+			name = Authentication;
+			path = "며소두샻ㅁ샤ㅐㅜ";
 			sourceTree = "<group>";
 		};
 		5A4468B82961E17800041E02 /* Messages */ = {
@@ -173,6 +190,7 @@
 		5A7DF57C2961C4860027B1B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A31B6A729664D5B007153E0 /* Authentication */,
 				5A31B6A02965B843007153E0 /* Tweets */,
 				5A7DF56E296185630027B1B1 /* ContentView.swift */,
 				5A31B6972964FAC2007153E0 /* Profile */,
@@ -283,6 +301,7 @@
 				5A31B68A29642F22007153E0 /* MessageInputView.swift in Sources */,
 				5A7DF56F296185630027B1B1 /* ContentView.swift in Sources */,
 				5A31B69B2964FB3C007153E0 /* ProfileActionButtonView.swift in Sources */,
+				5A15CF442967A20000868714 /* CustomTextField.swift in Sources */,
 				5A7DF57F2961C49F0027B1B1 /* FeedView.swift in Sources */,
 				5A31B68C29642F7B007153E0 /* ChatView.swift in Sources */,
 				5A31B692296431C9007153E0 /* MockMessage.swift in Sources */,
@@ -290,10 +309,12 @@
 				5A31B69F2964FF9D007153E0 /* FilterButtonView.swift in Sources */,
 				5A7DF56D296185630027B1B1 /* Twitter_SwiftUI_Clone_UdemyApp.swift in Sources */,
 				5A7DF5812961C6840027B1B1 /* TweetCell.swift in Sources */,
+				5A31B6AB29664D70007153E0 /* RegistrationView.swift in Sources */,
 				5A31B68F29643066007153E0 /* ChatBubble.swift in Sources */,
 				5A31B6962964F8A6007153E0 /* NewMessageView.swift in Sources */,
 				5A7DF5872961CA8E0027B1B1 /* SearchBar.swift in Sources */,
 				5A31B6992964FAC9007153E0 /* UserProfileView.swift in Sources */,
+				5A31B6A929664D68007153E0 /* LoginView.swift in Sources */,
 				5A31B69D2964FF96007153E0 /* ProfileHeaderView.swift in Sources */,
 				5A7DF5892961CC270027B1B1 /* UserCell.swift in Sources */,
 				5A4468BA2961E18C00041E02 /* ConversationView.swift in Sources */,
