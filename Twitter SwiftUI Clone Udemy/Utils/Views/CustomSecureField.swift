@@ -1,5 +1,5 @@
 //
-//  CustomTextField.swift
+//  CustomSecureField.swift
 //  Twitter SwiftUI Clone Udemy
 //
 //  Created by dudu on 2023/01/06.
@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct CustomTextField: View {
+struct CustomSecureField: View {
     @Binding var text: String
     let placeHolder: String
-    let imageName: String
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -21,14 +20,20 @@ struct CustomTextField: View {
             }
             
             HStack(spacing: 16) {
-                Image(systemName: imageName)
+                Image(systemName: "lock")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
                     .foregroundColor(.white)
                 
-                TextField("", text: $text)
+                SecureField("", text: $text)
             }
         }
+    }
+}
+
+struct CustomSecureField_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomSecureField(text: .constant("text"), placeHolder: "입력하세요")
     }
 }

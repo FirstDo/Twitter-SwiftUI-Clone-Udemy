@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A15CF442967A20000868714 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15CF432967A20000868714 /* CustomTextField.swift */; };
+		5A15CF462967A4D900868714 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15CF452967A4D900868714 /* CustomSecureField.swift */; };
 		5A31B68A29642F22007153E0 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B68929642F22007153E0 /* MessageInputView.swift */; };
 		5A31B68C29642F7B007153E0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B68B29642F7B007153E0 /* ChatView.swift */; };
 		5A31B68F29643066007153E0 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31B68E29643066007153E0 /* ChatBubble.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		5A15CF432967A20000868714 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		5A15CF452967A4D900868714 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		5A31B68929642F22007153E0 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		5A31B68B29642F7B007153E0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		5A31B68E29643066007153E0 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				5A15CF432967A20000868714 /* CustomTextField.swift */,
+				5A15CF452967A4D900868714 /* CustomSecureField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				5A31B68F29643066007153E0 /* ChatBubble.swift in Sources */,
 				5A31B6962964F8A6007153E0 /* NewMessageView.swift in Sources */,
 				5A7DF5872961CA8E0027B1B1 /* SearchBar.swift in Sources */,
+				5A15CF462967A4D900868714 /* CustomSecureField.swift in Sources */,
 				5A31B6992964FAC9007153E0 /* UserProfileView.swift in Sources */,
 				5A31B6A929664D68007153E0 /* LoginView.swift in Sources */,
 				5A31B69D2964FF96007153E0 /* ProfileHeaderView.swift in Sources */,
