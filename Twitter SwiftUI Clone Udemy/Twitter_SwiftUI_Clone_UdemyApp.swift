@@ -16,7 +16,8 @@ struct Twitter_SwiftUI_Clone_UdemyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            ContentView()
+                .environmentObject(AuthViewModel())
         }
     }
 }
