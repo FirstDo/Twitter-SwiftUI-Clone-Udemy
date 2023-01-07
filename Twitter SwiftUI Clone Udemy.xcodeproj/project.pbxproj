@@ -33,6 +33,7 @@
 		5A7DF5832961CA3E0027B1B1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DF5822961CA3E0027B1B1 /* SearchView.swift */; };
 		5A7DF5872961CA8E0027B1B1 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DF5862961CA8E0027B1B1 /* SearchBar.swift */; };
 		5A7DF5892961CC270027B1B1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DF5882961CC270027B1B1 /* UserCell.swift */; };
+		5AA321A12969349500E42BFF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321A02969349500E42BFF /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		5A7DF5822961CA3E0027B1B1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		5A7DF5862961CA8E0027B1B1 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		5A7DF5882961CC270027B1B1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		5AA321A02969349500E42BFF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				5A15CF432967A20000868714 /* CustomTextField.swift */,
 				5A15CF452967A4D900868714 /* CustomSecureField.swift */,
+				5AA321A02969349500E42BFF /* ImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				5A7DF5832961CA3E0027B1B1 /* SearchView.swift in Sources */,
 				5A31B68A29642F22007153E0 /* MessageInputView.swift in Sources */,
+				5AA321A12969349500E42BFF /* ImagePicker.swift in Sources */,
 				5A7DF56F296185630027B1B1 /* ContentView.swift in Sources */,
 				5A31B69B2964FB3C007153E0 /* ProfileActionButtonView.swift in Sources */,
 				5A15CF442967A20000868714 /* CustomTextField.swift in Sources */,
