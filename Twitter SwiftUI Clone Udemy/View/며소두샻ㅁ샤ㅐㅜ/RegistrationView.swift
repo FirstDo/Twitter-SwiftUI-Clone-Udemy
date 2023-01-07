@@ -14,7 +14,7 @@ struct RegistrationView: View {
     @State var fullname = ""
     @State var username = ""
     @State var showImagePicker = false
-    @State var image: Image?
+    @State var selectedImage: UIImage?
     @Environment(\.presentationMode) var presentation
     @StateObject var viewModel = AuthViewModel()
     
@@ -25,11 +25,10 @@ struct RegistrationView: View {
                     showImagePicker.toggle()
                 } label: {
                     ZStack {
-                        if let image = image {
-                            image
+                        if let selectedImage {
+                            Image(uiImage: selectedImage)
                                 .resizable()
                                 .scaledToFill()
-
                         } else {
                             Image("plus_photo")
                                 .resizable()
@@ -44,7 +43,7 @@ struct RegistrationView: View {
                     .padding(.bottom, 16)
                 }
                 .sheet(isPresented: $showImagePicker) {
-                    ImagePicker(image: $image)
+                    ImagePicker(image: $selectedImage)
                 }
                 
                 VStack(spacing: 20) {
@@ -87,8 +86,8 @@ struct RegistrationView: View {
                 }
                 
                 Button {
-                    guard let image else { return }
-                    viewModel.registerUser(email: email, password: password, username: username, fullname: fullname, profileImage: image)
+                    guard let selectedImage else { return }
+                    viewModel.registerUser(email: email, password: password, username: username, fullname: fullname, profileImage: selectedImage)
                 } label: {
                     Text("Sign Up")
                         .font(.headline)
