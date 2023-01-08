@@ -19,7 +19,7 @@ struct SearchView: View {
             ScrollView {
                 VStack {
                     ForEach(viewModel.users) { user in
-                        NavigationLink(destination: UserProfileView()) {
+                        NavigationLink(destination: UserProfileView(user: user)) {
                             UserCell(user: user)
                         }
                     }
