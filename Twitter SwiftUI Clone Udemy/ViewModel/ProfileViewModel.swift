@@ -16,6 +16,9 @@ final class ProfileViewModel: ObservableObject {
     
     init(user: User) {
         self.user = user
+        Task {
+            await self.checkIfUserIsFollowed()
+        }
     }
     
     func follow() async {
@@ -51,6 +54,20 @@ final class ProfileViewModel: ObservableObject {
             }
         } catch {
             debugPrint("Unfollow Error: \(error.localizedDescription)")
+        }
+    }
+    
+    func checkIfUserIsFollowed() async {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        let followingRef = followingColleciton.document(currentUid).collection("user-following")
+        
+        do {
+            let snapshot = try await followingRef.document(user.id).getDocument()
+            await MainActor.run {
+                self.isFollowed = snapshot.exists
+            }
+        } catch {
+            debugPrint("checkIfUserIsFollowed Error: \(error.localizedDescription)")
         }
     }
 }
