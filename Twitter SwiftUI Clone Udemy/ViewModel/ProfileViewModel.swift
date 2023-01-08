@@ -18,20 +18,39 @@ final class ProfileViewModel: ObservableObject {
         self.user = user
     }
     
-    func follow() {
+    func follow() async {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
-        Task {
-            try await followingColleciton.document(currentUid).collection("user-following").document(user.id).setData([:])
-            try await followerCollection.document(user.id).collection("user-followers").document(currentUid).setData([:])
+        let followingRef = followingColleciton.document(currentUid).collection("user-following")
+        let followersRef = followerCollection.document(user.id).collection("user-followers")
+        
+        do {
+            try await followingRef.document(user.id).setData([:])
+            try await followersRef.document(currentUid).setData([:])
             
             await MainActor.run {
                 self.isFollowed = true
             }
+        } catch {
+            debugPrint("Follow Error: \(error.localizedDescription)")
         }
     }
     
-    func unfollow() {
+    func unfollow() async {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
+        let followingRef = followingColleciton.document(currentUid).collection("user-following")
+        let followersRef = followerCollection.document(user.id).collection("user-followers")
+        
+        do {
+            try await followingRef.document(user.id).delete()
+            try await followersRef.document(currentUid).delete()
+            
+            await MainActor.run {
+                self.isFollowed = false
+            }
+        } catch {
+            debugPrint("Unfollow Error: \(error.localizedDescription)")
+        }
     }
 }
