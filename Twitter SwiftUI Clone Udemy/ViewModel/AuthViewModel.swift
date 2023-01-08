@@ -17,6 +17,9 @@ final class AuthViewModel: ObservableObject {
     
     init() {
         userSession = Auth.auth().currentUser
+        Task {
+            await fetchUser()
+        }
     }
     
     func login(withEmail email: String, password: String) async {
@@ -28,8 +31,10 @@ final class AuthViewModel: ObservableObject {
                 debugPrint("Login Success!")
             }
         } catch {
-            self.error = error
-            debugPrint("login error: ", error.localizedDescription)
+            await MainActor.run {
+                self.error = error
+                debugPrint("login error: ", error.localizedDescription)
+            }
         }
     }
     
@@ -56,15 +61,37 @@ final class AuthViewModel: ObservableObject {
             ]
             
             try await Firestore.firestore().collection("users").document(user.uid).setData(data)
-            self.userSession = user
+            await MainActor.run {
+                self.userSession = user
+            }
         } catch {
-            self.error = error
-            debugPrint("register error: ", error.localizedDescription)
+            await MainActor.run {
+                self.error = error
+                debugPrint("register error: ", error.localizedDescription)
+            }
         }
     }
     
     func signOut() {
         userSession = nil
         try? Auth.auth().signOut()
+    }
+    
+    func fetchUser() async {
+        guard let uid = userSession?.uid else {
+            return debugPrint("Error: User does not exist")
+        }
+        
+        do {
+            let snapshot = try await Firestore.firestore().collection("users").document(uid).getDocument()
+            guard let userData = snapshot.data() else { return }
+            let user = User(dictionary: userData)
+            debugPrint("User is \(user.username)")
+        } catch {
+            await MainActor.run {
+                self.error = error
+                debugPrint("fetchUser error: ", error.localizedDescription)
+            }
+        }
     }
 }

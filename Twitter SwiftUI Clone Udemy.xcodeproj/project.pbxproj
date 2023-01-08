@@ -40,6 +40,7 @@
 		5AA321B529694B1200E42BFF /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA321B429694B1200E42BFF /* FirebaseFunctions */; };
 		5AA321B729694B1200E42BFF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA321B629694B1200E42BFF /* FirebaseStorage */; };
 		5AA321BA29694BFA00E42BFF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321B929694BFA00E42BFF /* AuthViewModel.swift */; };
+		5AA321BC296AB6F000E42BFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321BB296AB6F000E42BFF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		5AA321A02969349500E42BFF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5AA321AD29694AA200E42BFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5AA321B929694BFA00E42BFF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		5AA321BB296AB6F000E42BFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				5A31B691296431C9007153E0 /* MockMessage.swift */,
+				5AA321BB296AB6F000E42BFF /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				5AA321A12969349500E42BFF /* ImagePicker.swift in Sources */,
 				5A7DF56F296185630027B1B1 /* ContentView.swift in Sources */,
 				5A31B69B2964FB3C007153E0 /* ProfileActionButtonView.swift in Sources */,
+				5AA321BC296AB6F000E42BFF /* User.swift in Sources */,
 				5A15CF442967A20000868714 /* CustomTextField.swift in Sources */,
 				5A7DF57F2961C49F0027B1B1 /* FeedView.swift in Sources */,
 				5A31B68C29642F7B007153E0 /* ChatView.swift in Sources */,
