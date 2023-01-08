@@ -11,11 +11,11 @@ import Kingfisher
 
 struct ProfileHeaderView: View {
     @State var selectedFilter: TweetFilterOptions = .tweets
-    let user: User
+    @ObservedObject var viewModel: ProfileViewModel
     
     var body: some View {
         VStack {
-            KFImage(URL(string: user.profileImageUrl))
+            KFImage(URL(string: viewModel.user.profileImageUrl))
                 .resizable()
                 .scaledToFill()
                 .clipped()
@@ -23,11 +23,11 @@ struct ProfileHeaderView: View {
                 .cornerRadius(120 / 2)
                 .shadow(color: .black, radius: 10, x: .zero, y: .zero)
             
-            Text(user.fullname)
+            Text(viewModel.user.fullname)
                 .font(.system(size: 16, weight: .semibold))
                 .padding(.top, 8)
             
-            Text("@\(user.username)")
+            Text("@\(viewModel.user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             
@@ -54,7 +54,7 @@ struct ProfileHeaderView: View {
             }
             .padding()
             
-            ProfileActionButtonView(isCurrentUser: user.isCurrentUser)
+            ProfileActionButtonView(viewModel: viewModel)
             
             FilterButtonView(selectedOption: $selectedFilter)
                 .padding()

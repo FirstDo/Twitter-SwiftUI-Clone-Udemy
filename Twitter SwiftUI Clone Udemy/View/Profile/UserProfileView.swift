@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    let user: User
+    @StateObject var viewModel: ProfileViewModel
+    
+    init(user: User) {
+        self._viewModel = StateObject(wrappedValue: ProfileViewModel(user: user))
+    }
     
     var body: some View {
         ScrollView {
             VStack {
-                ProfileHeaderView(user: user)
+                ProfileHeaderView(viewModel: viewModel)
                     .padding()
             }
             .navigationTitle("batman")

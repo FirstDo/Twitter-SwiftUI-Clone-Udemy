@@ -44,6 +44,7 @@
 		5AA321BF296ABAB200E42BFF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA321BE296ABAB200E42BFF /* Kingfisher */; };
 		5AA321C1296ABB2200E42BFF /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321C0296ABB2200E42BFF /* SearchViewModel.swift */; };
 		5AA321C3296ABB7200E42BFF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321C2296ABB7200E42BFF /* Constants.swift */; };
+		5AA321C5296AD14A00E42BFF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321C4296AD14A00E42BFF /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		5AA321BB296AB6F000E42BFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5AA321C0296ABB2200E42BFF /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		5AA321C2296ABB7200E42BFF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5AA321C4296AD14A00E42BFF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			children = (
 				5AA321B929694BFA00E42BFF /* AuthViewModel.swift */,
 				5AA321C0296ABB2200E42BFF /* SearchViewModel.swift */,
+				5AA321C4296AD14A00E42BFF /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				5A31B6A929664D68007153E0 /* LoginView.swift in Sources */,
 				5A31B69D2964FF96007153E0 /* ProfileHeaderView.swift in Sources */,
 				5AA321C1296ABB2200E42BFF /* SearchViewModel.swift in Sources */,
+				5AA321C5296AD14A00E42BFF /* ProfileViewModel.swift in Sources */,
 				5A7DF5892961CC270027B1B1 /* UserCell.swift in Sources */,
 				5A4468BA2961E18C00041E02 /* ConversationView.swift in Sources */,
 				5A31B6942964F7C3007153E0 /* MessageView.swift in Sources */,

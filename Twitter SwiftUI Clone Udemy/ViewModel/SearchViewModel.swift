@@ -20,7 +20,7 @@ final class SearchViewModel: ObservableObject {
     
     private func fetchUsers() async {
         do {
-            let snapshot = try await userCollections.getDocuments()
+            let snapshot = try await userCollection.getDocuments()
             await MainActor.run {
                 self.users = snapshot.documents.map { User(dictionary: $0.data()) }
             }
