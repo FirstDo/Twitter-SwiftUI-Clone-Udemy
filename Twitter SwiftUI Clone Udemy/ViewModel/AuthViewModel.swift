@@ -60,7 +60,7 @@ final class AuthViewModel: ObservableObject {
                 "uid": user.uid
             ]
             
-            try await Firestore.firestore().collection("users").document(user.uid).setData(data)
+            try await userCollections.document(user.uid).setData(data)
             await MainActor.run {
                 self.userSession = user
             }
@@ -83,7 +83,7 @@ final class AuthViewModel: ObservableObject {
         }
         
         do {
-            let snapshot = try await Firestore.firestore().collection("users").document(uid).getDocument()
+            let snapshot = try await userCollections.document(uid).getDocument()
             guard let userData = snapshot.data() else { return }
             let user = User(dictionary: userData)
             debugPrint("User is \(user.username)")

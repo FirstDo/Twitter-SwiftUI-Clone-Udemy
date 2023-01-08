@@ -12,6 +12,8 @@ struct NewMessageView: View {
     @Binding var show: Bool
     @Binding var startChat: Bool
     
+    @StateObject var viewModel = SearchViewModel()
+    
     var body: some View {
         VStack {
             SearchBar(text: $searchText)
@@ -19,26 +21,21 @@ struct NewMessageView: View {
             
             ScrollView {
                 VStack {
-                    ForEach(0..<10) { _ in
+                    ForEach(viewModel.users) { user in
                         Button {
                             show.toggle()
+  
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                 startChat.toggle()
                             }
                             
                         } label: {
-                            UserCell()
+                            UserCell(user: user)
                         }
                     }
                 }
                 .padding(.leading)
             }
         }
-    }
-}
-
-struct NewMessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewMessageView(show: .constant(true), startChat: .constant(true))
     }
 }
