@@ -20,7 +20,7 @@ struct UserProfileView: View {
                 ProfileHeaderView(viewModel: viewModel)
                     .padding()
             }
-            .navigationTitle("batman")
+            .navigationTitle(viewModel.user.username)
         }
     }
 }

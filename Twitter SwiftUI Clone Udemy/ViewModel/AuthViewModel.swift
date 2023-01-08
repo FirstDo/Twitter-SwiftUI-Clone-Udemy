@@ -10,16 +10,17 @@ import Firebase
 import FirebaseStorage
 
 final class AuthViewModel: ObservableObject {
-    @Published var userSession: FirebaseAuth.User?
+    @Published var userSession: FirebaseAuth.User? {
+        didSet {
+            Task { await fetchUser() }
+        }
+    }
     @Published var isAuthenticating = false
     @Published var error: Error?
-    // @Published var user: User?
+    @Published var user: User?
     
     init() {
         userSession = Auth.auth().currentUser
-        Task {
-            await fetchUser()
-        }
     }
     
     func login(withEmail email: String, password: String) async {
@@ -74,6 +75,7 @@ final class AuthViewModel: ObservableObject {
     
     func signOut() {
         userSession = nil
+        user = nil
         try? Auth.auth().signOut()
     }
     
@@ -85,8 +87,11 @@ final class AuthViewModel: ObservableObject {
         do {
             let snapshot = try await userCollection.document(uid).getDocument()
             guard let userData = snapshot.data() else { return }
-            let user = User(dictionary: userData)
-            debugPrint("User is \(user.username)")
+            
+            await MainActor.run {
+                self.user = User(dictionary: userData)
+                debugPrint("User is \(user?.username)")
+            }
         } catch {
             await MainActor.run {
                 self.error = error

@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct NewTweetView: View {
     @Binding var isPresented: Bool
     @State var captionText: String = ""
+    @EnvironmentObject var viewModel: AuthViewModel
+    @StateObject var tweetViewModel = UploadTweetViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack(alignment: .top) {
-                    Image("batman")
+                    KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
                         .resizable()
                         .scaledToFill()
                         .clipped()
@@ -28,17 +31,23 @@ struct NewTweetView: View {
                         .padding(.top, 24)
                 }
                 .padding()
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button {
-                            isPresented.toggle()
-                        } label: {
-                            Text("Cancel")
-                                .foregroundColor(.blue)
-                        }
+                
+                Spacer()
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        isPresented.toggle()
+                    } label: {
+                        Text("Cancel")
+                            .foregroundColor(.blue)
                     }
-                    
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        tweetViewModel.uplaodTweet()
+                    } label: {
                         Text("Tweet")
                             .padding(.horizontal)
                             .padding(.vertical, 8)
@@ -47,8 +56,6 @@ struct NewTweetView: View {
                             .clipShape(Capsule())
                     }
                 }
-                
-                Spacer()
             }
         }
     }
@@ -57,5 +64,6 @@ struct NewTweetView: View {
 struct NewTweetView_Previews: PreviewProvider {
     static var previews: some View {
         NewTweetView(isPresented: .constant(true))
+            .environmentObject(AuthViewModel())
     }
 }

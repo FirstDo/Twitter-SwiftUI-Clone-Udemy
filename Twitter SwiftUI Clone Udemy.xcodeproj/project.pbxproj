@@ -45,6 +45,7 @@
 		5AA321C1296ABB2200E42BFF /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321C0296ABB2200E42BFF /* SearchViewModel.swift */; };
 		5AA321C3296ABB7200E42BFF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321C2296ABB7200E42BFF /* Constants.swift */; };
 		5AA321C5296AD14A00E42BFF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321C4296AD14A00E42BFF /* ProfileViewModel.swift */; };
+		5AA321C7296AE42500E42BFF /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA321C6296AE42500E42BFF /* UploadTweetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		5AA321C0296ABB2200E42BFF /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		5AA321C2296ABB7200E42BFF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5AA321C4296AD14A00E42BFF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		5AA321C6296AE42500E42BFF /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,9 +223,9 @@
 		5A7DF57C2961C4860027B1B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A7DF56E296185630027B1B1 /* ContentView.swift */,
 				5A31B6A729664D5B007153E0 /* Authentication */,
 				5A31B6A02965B843007153E0 /* Tweets */,
-				5A7DF56E296185630027B1B1 /* ContentView.swift */,
 				5A31B6972964FAC2007153E0 /* Profile */,
 				5A7DF5842961CA430027B1B1 /* Feed */,
 				5A7DF5852961CA4C0027B1B1 /* Search */,
@@ -257,6 +259,7 @@
 				5AA321B929694BFA00E42BFF /* AuthViewModel.swift */,
 				5AA321C0296ABB2200E42BFF /* SearchViewModel.swift */,
 				5AA321C4296AD14A00E42BFF /* ProfileViewModel.swift */,
+				5AA321C6296AE42500E42BFF /* UploadTweetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				5A7DF5892961CC270027B1B1 /* UserCell.swift in Sources */,
 				5A4468BA2961E18C00041E02 /* ConversationView.swift in Sources */,
 				5A31B6942964F7C3007153E0 /* MessageView.swift in Sources */,
+				5AA321C7296AE42500E42BFF /* UploadTweetViewModel.swift in Sources */,
 				5AA321BA29694BFA00E42BFF /* AuthViewModel.swift in Sources */,
 				5A4468BC2961E19300041E02 /* ConversationCell.swift in Sources */,
 			);
