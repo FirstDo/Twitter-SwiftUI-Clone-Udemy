@@ -11,21 +11,25 @@ import Kingfisher
 struct NewTweetView: View {
     @Binding var isPresented: Bool
     @State var captionText: String = ""
-    @EnvironmentObject var viewModel: AuthViewModel
-    @StateObject var tweetViewModel = UploadTweetViewModel()
+    @ObservedObject var viewModel: UploadTweetViewModel
+    
+    init(isPresented: Binding<Bool>) {
+        self._isPresented = isPresented
+        self.viewModel = UploadTweetViewModel(isPresented: isPresented)
+    }
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack(alignment: .top) {
-                    KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
-                        .frame(width: 64, height: 64)
-                        .cornerRadius(32)
-                    
-                    
+                    if let user = AuthViewModel.shared.user {
+                        KFImage(URL(string: user.profileImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .clipped()
+                            .frame(width: 64, height: 64)
+                            .cornerRadius(32)
+                    }
 
                     TextField("", text: $captionText, prompt: Text("What's happening?"), axis: .vertical)
                         .padding(.top, 24)
@@ -46,7 +50,7 @@ struct NewTweetView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        tweetViewModel.uplaodTweet(caption: captionText)
+                        viewModel.uplaodTweet(caption: captionText)
                     } label: {
                         Text("Tweet")
                             .padding(.horizontal)

@@ -5,11 +5,17 @@
 //  Created by dudu on 2023/01/08.
 //
 
-import Foundation
+import SwiftUI
 
 import Firebase
 
 final class UploadTweetViewModel: ObservableObject {
+    @Binding var isPresented: Bool
+    
+    init(isPresented: Binding<Bool>) {
+        self._isPresented = isPresented
+    }
+    
     func uplaodTweet(caption: String) {
         guard let user = AuthViewModel.shared.user else { return }
         let docRef = tweetCollection.document()
@@ -27,6 +33,7 @@ final class UploadTweetViewModel: ObservableObject {
         
         docRef.setData(data) { _ in
             print("DEBUG: Successfully uploaded tweet..")
+            self.isPresented = false
         }
     }
 }
