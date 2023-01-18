@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import Firebase
+
+import FirebaseAuth
 import FirebaseStorage
 
 final class AuthViewModel: ObservableObject {
@@ -15,11 +16,14 @@ final class AuthViewModel: ObservableObject {
             Task { await fetchUser() }
         }
     }
+    
     @Published var isAuthenticating = false
     @Published var error: Error?
     @Published var user: User?
     
-    init() {
+    static let shared = AuthViewModel()
+    
+    private init() {
         userSession = Auth.auth().currentUser
     }
     

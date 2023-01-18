@@ -46,7 +46,7 @@ struct NewTweetView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        tweetViewModel.uplaodTweet()
+                        tweetViewModel.uplaodTweet(caption: captionText)
                     } label: {
                         Text("Tweet")
                             .padding(.horizontal)
@@ -64,6 +64,6 @@ struct NewTweetView: View {
 struct NewTweetView_Previews: PreviewProvider {
     static var previews: some View {
         NewTweetView(isPresented: .constant(true))
-            .environmentObject(AuthViewModel())
+            .environmentObject(AuthViewModel.shared)
     }
 }
