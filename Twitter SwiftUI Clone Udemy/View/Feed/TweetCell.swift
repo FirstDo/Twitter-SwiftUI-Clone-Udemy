@@ -40,7 +40,7 @@ struct TweetCell: View {
                 .padding([.bottom, .trailing])
             }
             
-            TweetActionsView()
+            TweetActionsView(tweet: tweet)
             Divider()
         }
         .padding(.trailing)

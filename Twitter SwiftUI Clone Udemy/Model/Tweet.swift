@@ -14,7 +14,7 @@ struct Tweet: Identifiable {
     let profileImageUrl: String
     let fullname: String
     let caption: String
-    let lieks: Int
+    let likes: Int
     let uid: String
     let timestamp: Timestamp
     
@@ -24,7 +24,7 @@ struct Tweet: Identifiable {
         self.profileImageUrl = dictionary["profileImageUrl"] as? String ?? ""
         self.fullname = dictionary["fullname"] as? String ?? ""
         self.caption = dictionary["caption"] as? String ?? ""
-        self.lieks = dictionary["likes"] as? Int ?? 0
+        self.likes = dictionary["likes"] as? Int ?? 0
         self.uid = dictionary["uid"] as? String ?? ""
         self.timestamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: .now)
     }

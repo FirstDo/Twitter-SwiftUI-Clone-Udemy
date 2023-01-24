@@ -49,7 +49,7 @@ struct TweetDetailView: View {
                 }
                 
                 HStack(spacing: 4) {
-                    Text("\(tweet.lieks)")
+                    Text("\(tweet.likes)")
                         .font(.system(size: 14, weight: .semibold))
                     Text("Likes")
                         .font(.system(size: 14))
@@ -59,7 +59,7 @@ struct TweetDetailView: View {
             
             Divider()
             
-            TweetActionsView()
+            TweetActionsView(tweet: tweet)
             
             Divider()
             
