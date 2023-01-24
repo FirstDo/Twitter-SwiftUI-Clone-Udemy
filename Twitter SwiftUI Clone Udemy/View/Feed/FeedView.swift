@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct FeedView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
     @State var isShowingNewTweetView = false
+    @StateObject var viewModel = FeedViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             ScrollView {
                 LazyVStack {
-                    ForEach(0..<100) { _ in
-                        TweetCell()
+                    ForEach(viewModel.tweets) { tweet in
+                        TweetCell(tweet: tweet)
                     }
                 }
                 .padding()

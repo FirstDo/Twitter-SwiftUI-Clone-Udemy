@@ -19,7 +19,7 @@ struct Tweet: Identifiable {
     let timestamp: Timestamp
     
     init(dictionary: [String: Any]) {
-        self.id = dictionary["uid"] as? String ?? ""
+        self.id = dictionary["id"] as? String ?? ""
         self.username = dictionary["username"] as? String ?? ""
         self.profileImageUrl = dictionary["profileImageUrl"] as? String ?? ""
         self.fullname = dictionary["fullname"] as? String ?? ""
